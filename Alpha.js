@@ -1456,7 +1456,7 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
  
  ➲ *Message : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
-                teks += `🎭 @${mem.id.split('@')[0]}\n`
+                teks += `❀ @${mem.id.split('@')[0]}\n`
                 }
                 GojoMdNx.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -1476,7 +1476,7 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
                 let anu = await styletext(text)
                 let teks = `Entered Text ${text}\n\n`
                 for (let i of anu) {
-                    teks += `🎭 *${i.name}* : ${i.result}\n\n`
+                    teks += `❀ *${i.name}* : ${i.result}\n\n`
                 }
                 reply(teks)
 	    }
@@ -1490,20 +1490,20 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
             await sleep(1000)
             upvote = vote[m.chat][1]
             devote = vote[m.chat][2]
-            teks_vote = `*❦VOTE ❦*
+            teks_vote = `*💙 VOTE 💙*
 
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
 │ 
-┃║🎭  Total: ${vote[m.chat][1].length}
+┃║👍  Total: ${vote[m.chat][1].length}
 │
 │ 
 └────
 
 ┌〔 DEVOTE 〕
 │ 
-┃║🎭  Total: ${vote[m.chat][2].length}
+┃║👍  Total: ${vote[m.chat][2].length}
 │
 │ 
 └────
@@ -1537,15 +1537,15 @@ let buttonsVote = [
 
 ┌〔 UPVOTE 〕
 │ 
-┃║🎭  Total: ${vote[m.chat][1].length}
-${vote[m.chat][1].map((v, i) => `┃║🎭  ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃║👍  Total: ${vote[m.chat][1].length}
+${vote[m.chat][1].map((v, i) => `┃║💙  ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
 ┌〔 DEVOTE 〕
 │ 
-┃║🎭  Total: ${vote[m.chat][2].length}
-${vote[m.chat][2].map((v, i) => `┃║🎭  ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃║👍  Total: ${vote[m.chat][2].length}
+${vote[m.chat][2].map((v, i) => `┃║💙  ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
@@ -1615,17 +1615,17 @@ teks_vote = `*❦VOTE ❦*
 
 *Reason:* ${vote[m.chat][0]}
 
-┌ ALPHA VOTING
+┌ 𝗗𝗨𝗢 VOTING
 │ 
-┃║🎭  Total: ${upvote.length}
-${vote[m.chat][1].map((v, i) => `┃║🎭  ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃║💙  Total: ${upvote.length}
+${vote[m.chat][1].map((v, i) => `┃║❀  ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
 ┌ ALPHA VOTING
 │ 
-┃║🎭  Total: ${devote.length}
-${vote[m.chat][2].map((v, i) => `┃║🎭  ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃║💙  Total: ${devote.length}
+${vote[m.chat][2].map((v, i) => `┃║❀  ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
@@ -1653,8 +1653,8 @@ break
                     await GojoMdNx.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Successful Opening The Group`)).catch((err) => reply(jsonformat(err)))
                 } else {
                 let buttons = [
-                        { buttonId: 'group open', buttonText: { displayText: 'UNMUTE GROUP' }, type: 1 },
-                        { buttonId: 'group close', buttonText: { displayText: 'MUTE GROUP' }, type: 1 }
+                        { buttonId: 'group open', buttonText: { displayText: '𝗧𝗛𝗜𝗦 𝗚𝗿𝗼𝘂𝗽 𝗺𝘂𝘁𝗲𝗱...' }, type: 1 },
+                        { buttonId: 'group close', buttonText: { displayText: '𝗧𝗛𝗜𝗦 𝗚𝗿𝗼𝘂𝗽 𝘂𝗻𝗺𝘂𝘁𝗲𝗱...' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, `Group Mode`, GojoMdNx.user.name, m)
 
@@ -1693,8 +1693,8 @@ break
                 reply(`Antilink Inactive !`)
                 } else {
                  let buttons = [
-                        { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
-                        { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
+                        { buttonId: 'antilink on', buttonText: { displayText: '𝗔𝗻𝘁𝗶 𝗹𝗶𝗻𝗸 𝗼𝗻...' }, type: 1 },
+                        { buttonId: 'antilink off', buttonText: { displayText: '𝗔𝗻𝘁𝗶 𝗹𝗶𝗻𝗸 𝗼𝗳𝗳...' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, `Antilink Mode`, GojoMdNx.user.name, m)
                 }
@@ -1714,8 +1714,8 @@ break
                 reply(`${GojoMdNx.user.name} Has Been Unmuted In This Group!`)
                 } else {
                  let buttons = [
-                        { buttonId: 'mute on', buttonText: { displayText: 'ALPHA MUTE' }, type: 1 },
-                        { buttonId: 'mute off', buttonText: { displayText: 'ALPHA UNMUTE' }, type: 1 }
+                        { buttonId: 'mute on', buttonText: { displayText: '𝗗𝗨𝗢 𝗠𝘂𝘁𝗲...❀' }, type: 1 },
+                        { buttonId: 'mute off', buttonText: { displayText: '𝗗𝗨𝗢 𝗨𝗻𝗺𝘂𝘁𝗲...❀' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, `Mute Bot`, GojoMdNx.user.name, m)
                 }
@@ -1776,7 +1776,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `❦ALPHA-SATORU HERE🎉 ❦\n\n${text}`
+                      let txt = `💙 𝗗𝗨𝗢 -SATORU HERE🎉 💙\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
                 reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
@@ -1791,26 +1791,26 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'SCRIPT',
+                                    displayText: '𝗦𝗖𝗥𝗜𝗣𝗧',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'YOUTUBE',
+                                    displayText: '𝗬𝗢𝗨𝗧𝗨𝗕𝗘',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'MENU',
+                                    displayText: '𝗠𝗘𝗡𝗨',
                                     id: 'alpha'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'OWNER',
+                                    displayText: '𝗢𝗪𝗡𝗘𝗥',
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `❦ALPHA-SATORU HERE 🎉❦\n\n${text}`
+                      let txt = `💙 𝗗𝗨𝗢-SATORU HERE 🎉 💙\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
 		reply('Broadcast Success')
@@ -1825,8 +1825,8 @@ break
                     let read = i.readTimestamp
                     let unread = i.receiptTimestamp
                     let waktu = read ? read : unread
-                    teks += `🎭 @${i.userJid.split('@')[0]}\n`
-                    teks += ` ┗━🎭 *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} 🎭 *Status :* ${read ? 'Read' : 'Sent'}\n\n`
+                    teks += `💙 @${i.userJid.split('@')[0]}\n`
+                    teks += ` ┗━💙 *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} 💙 *Status :* ${read ? 'Read' : 'Sent'}\n\n`
                 }
                 GojoMdNx.sendTextWithMentions(m.chat, teks, m)
             }
@@ -2064,7 +2064,7 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: images },
-                    caption: `*------- ALPHA IMAGE SEARCH -------*
+                    caption: `*------- 𝗗𝗨𝗢 IMAGE SEARCH -------*
 🎭 *Query* : ${text}
 🔗 *Media Url* : ${images}`,
                     footer: GojoMdNx.user.name,
@@ -2087,14 +2087,13 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-🎭 Title : ${anu.title}
-🎭 ID : ${anu.videoId}
-🎭 Duration : ${anu.timestamp}
-🎭 Viewes : ${anu.views}
-🎭 Uploaded On : ${anu.ago}
-🎭 Author : ${anu.author.name}
-🎭 Channel : ${anu.author.url}
-🎭 Url : ${anu.url}`,
+╔═════𝗗𝗨𝗢 𝗕𝗢𝗧═════╗
+|❀  Title : ${anu.title}
+|❀  ID : ${anu.videoId}
+|❀  Viewes : ${anu.views}
+|❀  Uploaded On : ${anu.ago}
+|❀  Channel : ${anu.author.url}
+*╚═══❖𝗗𝗨𝗢 𝗕𝗢𝗧❖═══╝*`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2109,18 +2108,12 @@ break
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `dgvideo  ${anu.url}`, buttonText: {displayText: '320P QUALITY'}, type: 1},
-                    {buttonId: `dvideo  ${anu.url}`, buttonText: {displayText: '240P QUALITY️'}, type: 1}
+                    {buttonId: `dgvideo  ${anu.url}`, buttonText: {displayText: '720p'}, type: 1},
+                    {buttonId: `dvideo  ${anu.url}`, buttonText: {displayText: '360p'}, type: 1}
                 ]
                 let buttonMessage = {
-                    image: { url: anu.thumbnail },
-                    caption: `
-         🎭ᴀʟᴘʜᴀ ʙᴏᴛ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ🎭         
-🎭 Title : ${anu.title}
-🎭 Duration : ${anu.timestamp}
-🎭 Viewes : ${anu.views}
-🎭 Uploaded On : ${anu.ago}
-🎭 Url : ${anu.url}`,
+                    image: { url: },
+                    caption: ``,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2867,17 +2860,15 @@ case 'webtonsearch': case 'webtoon':
 		let anu = await umma(isUrl(text)[0])
 		if (anu.type == 'video') {
 		    let buttons = [
-                        {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '🎵Audio🎵'}, type: 1},
-                        {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                        {buttonId: `ytmp3 ${anu.media[0]}`, buttonText: {displayText: 'Song'}, type: 1},
+                        {buttonId: `ytmp4 ${anu.media[0]}`, buttonText: {displayText: 'Video'}, type: 1}
                     ]
 		    let buttonMessage = {
 		        image: { url: anu.author.profilePic },
 			caption: `
 🎭 Title : ${anu.title}
 🎭 Author : ${anu.author.name}
-🎭 Like : ${anu.like}
 🎭 Caption : ${anu.caption}
-🎭 Url : ${anu.media[0]}
 To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp4 Command With The Url Above
 `,
 			footer: GojoMdNx.user.name,
@@ -3456,7 +3447,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 case 'alpha':
 var unicorn = await getBuffer(picak+'Main Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔═✪❦MAIN ❦
 ┃║🎭  ${prefix}alive
 ┃║🎭  ${prefix}script
@@ -3478,7 +3469,7 @@ break
 case 'grupmenu': case 'groupmenu':
 var unicorn = await getBuffer(picak+'Group Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔═✪❦GROUP ❦	        
 ┃║🎭 ${prefix}grouplink
 ┃║🎭 ${prefix}ephemeral [option]
@@ -3507,7 +3498,7 @@ break
 case 'rpgmenu':
 var unicorn = await getBuffer(picak+'Rpg Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔═✪❦RPG ❦	        
 ┃║🎭 ${prefix}hunting
 ┃║🎭 ${prefix}mining
@@ -3525,7 +3516,7 @@ break
 case 'funmenu':
 var unicorn = await getBuffer(picak+'Fun Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔═✪❦FUN ❦	        
 ┃║🎭  ${prefix}how [text
 ┃║🎭  ${prefix}when [text]
@@ -3578,7 +3569,7 @@ break
 case 'ownermenu':
 var unicorn = await getBuffer(picak+'Owner Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔═✪❦OWNER ❦	        
 ┃║🎭 ${prefix}grouplink
 ┃║🎭 ${prefix}ephemeral [option]
@@ -3606,7 +3597,7 @@ break
 case 'downloadmenu':
 var unicorn = await getBuffer(picak+'Downloader Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔═✪❦DOWNLOADER ❦	        
 ┃║🎭 ${prefix}ytmp3 [url|quality]
 ┃║🎭 ${prefix}ytmp4 [url|quality]
@@ -3621,7 +3612,7 @@ break
 case 'searchmenu':
 var unicorn = await getBuffer(picak+'Search Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔══✪❦SEARCHER ❦	        
 ┃║🎭 ${prefix}play [query]
 ┃║🎭 ${prefix}song [query]
@@ -3640,7 +3631,7 @@ break
 case 'randommenu':
 var unicorn = await getBuffer(picak+'Random Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔══✪❦RANDOM ❦	        
 ┃║🎭 ${prefix}coffee
 ┃║🎭 ${prefix}animequote (indo)
@@ -3651,7 +3642,7 @@ break
 case 'randomanimemenu':
 var unicorn = await getBuffer(picak+'Random Anime Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔✪❦RANDOM ANIME ❦	        
 ┃║🎭 ${prefix}loli
 ┃║🎭 ${prefix}bully
@@ -3686,7 +3677,7 @@ break
 case 'textpromenu':
 var unicorn = await getBuffer(picak+'Text Pro Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔═✪❦TEXT PRO ❦	        
 ┃║🎭  ${prefix}3dchristmas [txt]
 ┃║🎭  ${prefix}3ddeepsea [txt]
@@ -3725,7 +3716,7 @@ break
 case 'convertmenu':
 var unicorn = await getBuffer(picak+'Converter Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔══✪❦CONVERTER ❦	        
 ┃║🎭  ${prefix}photo [reply to sticker]
 ┃║🎭  ${prefix}sticker [reply img|gif]
@@ -3746,7 +3737,7 @@ break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔═══✪❦DATABASE ❦	        
 ┃║🎭  ${prefix}setcmd
 ┃║🎭  ${prefix}listcmd
@@ -3762,7 +3753,7 @@ break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━❦${botname} ❦━━⭓ 
+┏━❦ DUO BOT ❦━━⭓ 
 ┃╔══✪❦ANONYMOUS CHAT ❦	        
 ┃║🎭 ${prefix}anonymous
 ┃║🎭 ${prefix}start
@@ -3847,12 +3838,9 @@ break
                 let buttonMessage = {
                     image: fs.readFileSync('./GojoMedia/ttg.jpg'),
                     caption: `═══════════════════
-     *🎭ᴀʟᴘʜᴀ ʙᴏᴛ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ🎭* 
+     *🎭DUO ʙᴏᴛ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ🎭* 
 ═══════════════════
-RUNTIME : ${runtime(process.uptime())}
 BOT NAME : ${global.botname}
-OWNER NAME : ${global.ownername}
-OWNER NUMBER   : ${global.owner}
 HOST NAME: ${os.hostname()}
 PLATFORM : ${os.platform()}
 TOTAL USERS : ${Object.keys(global.db.data.users).length}
