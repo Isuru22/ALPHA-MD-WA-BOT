@@ -2112,8 +2112,8 @@ break
                     {buttonId: `dvideo  ${anu.url}`, buttonText: {displayText: '360p'}, type: 1}
                 ]
                 let buttonMessage = {
-                    image: { url: },
-                    caption: ``,
+                    image: { url: anu.thumbnail },
+                    caption: `SONG`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
