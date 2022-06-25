@@ -1956,7 +1956,7 @@ break
             GojoMdNx.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
             }
             break
-            case 'tomp3': {
+            case 'docmp3': {
             if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want to Convert Into MP3 With Caption ${prefix + command}`)
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Convert into MP3 With Caption ${prefix + command}`)
             if (!quoted) return replay(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
@@ -2082,8 +2082,8 @@ break
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
                     {buttonId: `fsong ${anu.url}`, buttonText: {displayText: 'song'}, type: 1},
-                    {buttonId: `dgvideo  ${anu.url}`, buttonText: {displayText: 'video(720p)'}, type: 1},
-		    {buttonId: `dvideo  ${anu.url}`, buttonText: {displayText: 'video(360p)'}, type: 1}
+                    {buttonId: `dgvideo  ${anu.url}`, buttonText: {displayText: 'video(360p)'}, type: 1},
+		    {buttonId: `dvideo  ${anu.url}`, buttonText: {displayText: 'video(720p-some err)'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
