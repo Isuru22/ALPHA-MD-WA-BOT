@@ -2081,8 +2081,9 @@ break
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `fsong ${anu.url}`, buttonText: {displayText: 'HIGH QUALITY'}, type: 1},
-                    {buttonId: `ytmp3  ${anu.url}`, buttonText: {displayText: 'MEDIUM QUALITY️'}, type: 1}
+                    {buttonId: `fsong ${anu.url}`, buttonText: {displayText: 'song'}, type: 1},
+                    {buttonId: `dgvideo  ${anu.url}`, buttonText: {displayText: 'video(720p)'}, type: 1},
+		    {buttonId: `dvideo  ${anu.url}`, buttonText: {displayText: 'video(360p)'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
@@ -2102,7 +2103,7 @@ break
             }
             break
             
-            case 'video':  {
+            case 'yttt':  {
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2113,7 +2114,7 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
-                    caption: `SONG`,
+                    caption: `VIDEO`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
