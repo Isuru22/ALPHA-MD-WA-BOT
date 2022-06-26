@@ -1956,7 +1956,7 @@ break
             GojoMdNx.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
             }
             break
-            case 'docmp3': {
+            case 'ytyt': {
             if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want to Convert Into MP3 With Caption ${prefix + command}`)
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Convert into MP3 With Caption ${prefix + command}`)
             if (!quoted) return replay(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
@@ -2083,7 +2083,7 @@ break
                 let buttons = [
                     {buttonId: `fsong ${anu.url}`, buttonText: {displayText: 'song'}, type: 1},
                     {buttonId: `dgvideo  ${anu.url}`, buttonText: {displayText: 'video(360p)'}, type: 1},
-		    {buttonId: `dvideo  ${anu.url}`, buttonText: {displayText: 'video(720p-some err)'}, type: 1}
+		    {buttonId: `dvideo  ${anu.url}`, buttonText: {displayText: 'video(240p-some error)'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
@@ -2720,7 +2720,7 @@ case 'webtonsearch': case 'webtoon':
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
                 let buttons = [
-                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: '🥬With Watermark🥬'}, type: 1},
+                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: 'With Watermark'}, type: 1},{buttonId: `tiktoknowm ${text}`, buttonText: {displayText: 'No Watermark'}, type: 1},	
                     {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '🎵Audio🎵'}, type: 1}
                 ]
                 let buttonMessage = {
