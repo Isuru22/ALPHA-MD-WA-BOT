@@ -3859,7 +3859,7 @@ break
  
 ||Thank for use bot```
  
-  ------------------------ `,
+  ------------------------`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
