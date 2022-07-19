@@ -3858,9 +3858,8 @@ break
 ||   *This bot not private*
  
 ||Thank for use bot```
-  ________
-  ------------------------
-─────────────────── `,
+ 
+  ------------------------ `,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
