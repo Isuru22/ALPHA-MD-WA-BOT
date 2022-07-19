@@ -3857,7 +3857,7 @@ break
 ||   *You can use Our group*
 ||   *This bot not private*
  
-||```Thank for use bot```
+||Thank for use bot```
   ________
   ------------------------
 ─────────────────── `,
