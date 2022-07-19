@@ -3838,28 +3838,7 @@ break
                 ]
                 let buttonMessage = {
                     image: fs.readFileSync('./GojoMedia/ttg.jpg'),
-                    caption: `═══════════════════
-     *💃DUO ʙᴏᴛ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ💃* 
-═══════════════════
-💃 Duo bot V 1.1.1 💃
-   ༺Public edition༻
-
-   🅸'🅼 🅰🅻🅸🆅🅴 🅽🅾🆆
-------------------------
-||  Deployed by = Isuru Sampath
-||  Developer     = Achi Bro lk
-||  Team             = CK Master team
-||  Our main Bot group  
-       | Invitation link: ``https://chat.whatsapp.com/JTZFubnXa9S8PYt2iwwrYJ
-||  All commands    = *.menu*
-
-||   *Don't come my imbox*
-||   *You can use Our group*
-||   *This bot not private*
- 
-||Thank for use bot```
- 
-  ------------------------/n/n`,
+                    caption: `═*💃DUO ʙᴏᴛ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ💃* 🅸'🅼 🅰🅻🅸🆅🅴 🅽🅾🆆═`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
