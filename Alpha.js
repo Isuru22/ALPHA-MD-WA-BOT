@@ -1956,7 +1956,7 @@ break
             GojoMdNx.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
             }
             break
-            case 'ytyt': {
+            case 'mp3': {
             if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want to Convert Into MP3 With Caption ${prefix + command}`)
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Convert into MP3 With Caption ${prefix + command}`)
             if (!quoted) return replay(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
@@ -2088,13 +2088,13 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-╔═════𝗗𝗨𝗢 𝗕𝗢𝗧═════╗
-|❀  Title : ${anu.title}
-|❀  ID : ${anu.videoId}
-|❀  Viewes : ${anu.views}
-|❀  Uploaded On : ${anu.ago}
-|❀  Channel : ${anu.author.url}
-*╚═══❖𝗗𝗨𝗢 𝗕𝗢𝗧❖═══╝*`,
+╔════𝗗𝗨𝗢 𝗕𝗢𝗧════╗
+|⚡  Title : ${anu.title}
+|
+|🧐  Viewes : ${anu.views}
+|
+|❄  URL : ${anu.author.url}
+*╚══❖𝗗𝗨𝗢 𝗕𝗢𝗧❖══╝*`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2103,7 +2103,7 @@ break
             }
             break
             
-            case 'yttt':  {
+            case 'video':  {
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2135,17 +2135,17 @@ break
             case 'ytmp4': case 'dgvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
-                let quality = args[1] ? args[1] : '360p'
+                let quality = args[1] ? args[1] : '720p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎭 Title : ${media.title}\n🎭 File Size : ${media.filesizeF}\n🎭 Url : ${isUrl(text)}\n🎭 Ext : MP3\n🎭 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `💃 Title : ${media.title}\n💃 File Size : ${media.filesizeF}\n💃 Url : ${isUrl(text)}\n💃 Ext : MP3\n💃 Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
             
             case 'dvideo':{
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
-                let quality = args[1] ? args[1] : '240p'
+                let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎭 Title : ${media.title}\n🎭 File Size : ${media.filesizeF}\n🎭 Url : ${isUrl(text)}\n🎭 Ext : MP3\n🎭 Resolution : ${args[1] || '240p'}` }, { quoted: m })
@@ -3314,7 +3314,7 @@ reply("Success Changing Menu To "+q)
 break
                     case 'bug': case 'report': {
                     	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
-                    	GojoMdNx.sendMessage(`94784506970@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+                    	GojoMdNx.sendMessage(`94764341089@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
