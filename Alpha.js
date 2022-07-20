@@ -2128,7 +2128,7 @@ break
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendImage(m.chat, media.thumb, `🎭 Title : ${media.title}\n🎭 File Size : ${media.filesizeF}\n🎭 Url : ${isUrl(text)}\n🎭 Ext : MP3\n🎭 Resolution : ${args[1] || '128kbps'}`, m)
+                GojoMdNx.sendImage(m.chat, media.thumb, `💃 Title : ${media.title}\n💃 File Size : ${media.filesizeF}\n💃 Url : ${isUrl(text)}\n💃 Ext : MP3\n💃 Resolution : ${args[1] || '128kbps'}`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
